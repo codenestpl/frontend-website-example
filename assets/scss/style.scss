@@ -1,0 +1,28 @@
+/* ==========================================================================
+   Main scss file
+   ========================================================================== */
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "libs/owl.scss"; 
+@import "libs/sidebars.scss"; 
+
+@import "settings";
+@import "mixins";     
+@import "extensions";  
+@import "elements";
+@import "general"; 
+@import "svg"; 
+@import "owl-nav"; 
+@import "header";
+@import "footer";
+@import "sidebar-menu";
+@import "landing-section"; 
+@import "benefits"; 
+@import "how-works"; 
+@import "team";        
+@import "free-trail-section";         
+@import "competitor-section";         
+@import "hot-press-section";         
+@import "testimonial-section";     
+@import "app-section";      
+@import "tabelka";
+@import "blog";

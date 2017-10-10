@@ -1,0 +1,234 @@
+/* ==========================================================================
+   SVG 
+   ========================================================================== */
+
+.stroke-3 {
+
+	stroke-linecap: round;
+	stroke-width:3px;
+	fill:none;  
+	 vector-effect:non-scaling-stroke;
+
+	path, line, circle, ellipse {
+		stroke-linecap: round;
+		stroke-width:3px;
+		fill:none; 
+	}
+
+}
+
+.stroke-2 {
+
+	stroke-linecap: round;
+	stroke-width:2px !important;
+	fill:none;   
+	 vector-effect:non-scaling-stroke;
+
+	path, line, circle, ellipse {
+		stroke-linecap: round;
+		stroke-width:2px;
+		fill:none; 
+	}
+
+}
+
+.stroke-grey-blue {
+
+	path, line, circle, ellipse {
+		stroke:$c-grey-blue-light;
+		fill:none;
+
+		&.filled {
+			stroke:transparent;
+			fill:$c-grey-blue-light;
+		}
+
+	}
+	
+}
+
+.stroke-grey {
+
+	path, line, circle, ellipse, polyline, rect {
+		stroke:$c-grey-light;
+		fill:none;
+
+		&.filled {
+			stroke:transparent;
+			fill:$c-grey-light;
+		}
+
+	}
+	
+}
+
+.stroke-green {
+
+	path, line, circle, ellipse, polyline, rect {
+		stroke:$c-green;
+		fill:none;
+
+		&.filled {
+			stroke:transparent;
+			fill:$c-green;
+		}
+
+	}
+	
+}
+
+.stroke-white {
+
+	path, line, circle, ellipse, polyline {
+		stroke:#fff;
+		fill:none;
+
+		&.filled {
+			stroke:transparent;
+			fill:#fff;
+		}
+
+	}
+	
+}
+
+.fill-white {
+
+	path, line, circle, ellipse, polyline { 
+		fill:#fff;
+
+		&.filled {
+			stroke:transparent;
+			fill:#fff;
+		}
+
+	}
+	
+}
+ 
+
+path, line, circle, ellipse, polyline {
+
+	&.fill-white {
+		fill:#fff;  
+	}
+
+	&.stroke-green {
+		stroke:$c-green; 
+	}
+
+	&.fill-green {
+		fill:$c-green; 
+	}
+
+	&.stroke-purple {
+		stroke:$c-purple; 
+	}
+
+	&.fill-purple {
+		fill:$c-purple; 
+	}
+
+	&.stroke-grey-blue {
+		stroke:$c-grey-blue-light;
+	}
+
+	&.fill-grey-blue {
+		fill:$c-grey-blue-light;
+	}
+
+	&.fill-grey-light {
+		fill:$c-grey-light;
+	}
+
+	&.fill-grey-xlight {
+		fill:#EFEFEF;
+	}
+
+	&.stroke-grey-light {
+		stroke:$c-grey-light;
+	}
+
+	&.stroke-none {
+		stroke-width:0 !important;
+	}
+			
+}
+
+.to-stroke-animate {
+
+	path, line, circle, ellipse {
+		transition: all $duration-desktop*3 $cubic-bezier $duration-desktop*2.5; 
+	}
+
+	.stroke-xsmall {
+		    stroke-dasharray: 50;
+    		stroke-dashoffset: 50;
+
+    		&.opposite {
+    			stroke-dashoffset: -50;
+    		}
+    }
+	
+	.stroke-small {
+		    stroke-dasharray: 150;
+    		stroke-dashoffset: 150;
+
+    		&.opposite {
+    			stroke-dashoffset: -150;
+    		}
+	}
+
+.stroke-normal {
+		    stroke-dasharray: 250;
+    		stroke-dashoffset: 250;
+
+    		&.opposite {
+    			stroke-dashoffset: -250;
+    		}
+	}
+
+}
+
+.active.center .to-stroke-animate {
+		
+	path, line, circle, ellipse {
+
+	}
+
+	.stroke-xsmall,
+	.stroke-small,
+	.stroke-normal { 
+		stroke-dashoffset: 0;
+	}
+		
+}
+
+@include media-breakpoint-down(md) {
+
+.stroke-3 { 
+	stroke-width:2px !important;
+	 
+
+	path, line, circle, ellipse { 
+		stroke-width:2px !important;
+		 
+	}
+
+}
+
+.stroke-2 {
+
+	stroke-linecap: round;
+	stroke-width:2px !important;
+	fill:none;  
+	 vector-effect:non-scaling-stroke;
+
+	path, line, circle, ellipse { 
+		stroke-width:1px !important;
+	 
+	}
+
+}
+
+}

@@ -1,0 +1,229 @@
+/* ==========================================================================
+   Testimonial section
+   ========================================================================== */
+
+
+.testimonial-section { 
+    padding-bottom:30px;
+    background: #f4f5f6; 
+    margin:80px 0 140px; 
+    color: #ffffff; 
+    .container {
+        position: relative;
+        z-index: 2; 
+    } 
+    .more-button {
+        margin-top: 30px;
+        float: left;
+    }
+}
+.list-reviews {
+    margin-top: 40px; 
+
+    &.mobile-version {
+        display: none;
+    }
+}
+.reviews-box {
+    width:100%; 
+    margin-bottom: 50px;
+    display: inline-block;
+    vertical-align: top;
+    &:nth-child(3n) {
+        margin-right: 0;
+    }    
+    .quot {
+        background: #ffffff; 
+        margin: 0;
+        display: inline-block;
+        padding: 22px 30px;
+        position: relative;
+            width: 100%;
+        &:before {
+            background: #ffffff;
+            width: 28px;
+            height: 10px;
+            display: block;
+            content: "";
+            position: absolute;
+            left: 60px;
+            bottom: -5px;
+        }
+        &:after {
+            width: 0;
+            height: 0;
+            display: block;
+            content: "";
+            border-top: 20px transparent solid;
+            border-right: 20px transparent solid;
+            border-bottom: 20px transparent solid;
+            border-left: 20px #ffffff solid;
+            transform: rotate(-135deg);
+            position: absolute;
+            bottom: -25px;
+            left: 40px;
+        }
+        strong {
+            font-weight: 600;
+        }
+    }
+    p {
+        color: #31393e;
+        text-align: justify;
+        text-align-last: center;
+    }
+    .avatar {
+        min-height: 85px;
+        padding-left: 110px;
+        position: relative;
+        margin-top: 45px;
+        margin-left: 45px;
+        overflow: hidden;
+    }
+    .avatar-icon {
+        width: 85px;
+        height: 85px;
+        border-radius: 50%;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        img {
+            width: 100%;
+            border-radius: 50%;
+        }
+    }
+    .name {
+        font-weight: 600;
+        font-size: 0.875em;
+        margin: 14px 0 0 0;
+        display: block;
+    }
+    .pos {
+        font-size: 0.750em;
+        margin: 0;
+    }
+    .date {
+        font-size: 0.750em;
+        margin: 0;
+    }
+}
+
+
+@include media-breakpoint-down(lg) { 
+
+    .list-reviews.desktop-version {
+        .col-md-4 {
+            padding: 0 10px;
+        }
+        
+        .reviews-box {
+            margin-bottom: 20px;
+        }
+
+        .reviews-box .quot {
+            padding: 15px;
+        }
+
+        .avatar-icon {
+            @include size(65px, 65px)
+        }
+
+        .reviews-box .avatar {
+            margin-top: 40px;
+             margin-left: 15px;
+             padding-left: 80px;
+
+            p {
+                text-align: left;
+                    text-align-last: left;
+            }
+
+            .name {
+                margin-top: 0px;
+            }
+        }
+
+    }
+
+}
+@media all and (max-width: 991px) {
+    
+    .servive-box {
+        width: 33.33%;
+    }
+    
+}
+
+@media all and (max-width: 767px) {
+    
+    .servive-box {
+        width: 50%;
+        margin-bottom: 40px;
+    }
+    .testimonial-section {
+        .more-button {
+            float: none;
+        }
+    }
+    .list-reviews {
+        margin-top: 20px;
+        &.desktop-version {
+            display: none;
+        }
+        &.mobile-version {
+            display: block;
+        }
+    }
+    .list-reviews-slider {
+        .owl-nav {
+            .owl-prev, .owl-next {
+                top: auto;
+                bottom: 90px;
+            } 
+        }
+    }
+    .reviews-box {
+        margin: 0 0px;
+        .avatar {
+            padding-left: 0;
+            margin-left: 0;
+            text-align: center;
+            .avatar-icon {
+                position: relative;
+            }
+        }
+        p {
+            text-align: justify;
+        }
+        .quot {
+            &:before {
+                right: 0;
+                left: 0;
+                margin: 0 auto;
+            }
+            &:after {
+                right: 0;
+                left: -28px;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

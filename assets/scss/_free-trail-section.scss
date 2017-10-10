@@ -1,0 +1,58 @@
+/* ==========================================================================
+   free trail section
+   ========================================================================== */
+ 
+ 
+
+.free-trail-section.skewed {
+    
+ 
+    
+    background: #54bf8b; 
+    text-align: center;  
+    padding-bottom: 120px; 
+    margin-bottom:-70px;
+
+    .container {
+        position: relative;
+        z-index: 2;
+        top: -15px;
+    }
+    hgroup {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+    .subheading-section {
+        color: #ffffff;
+    }
+    .heading-section {
+        color: #ffffff;
+        margin-top: 5px;
+    }
+    a {
+        transform:scale(1.2, 1.2);
+    }
+}
+
+
+
+
+@include media-breakpoint-down(md) { 
+        
+        .free-trail-section.skewed {
+            padding-bottom: 70px;
+        }
+
+        .free-trail-section.skewed a { 
+            transform: scale(1,1);
+        }
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,222 @@
+/* ==========================================================================
+   hot press section
+   ========================================================================== */
+
+/* Texts
+   ========================================================================== */
+ 
+
+.hot-press-section { 
+    
+  
+    .btn {
+        margin-top: 40px;
+        margin-left: -10px;
+    }
+
+    hgroup {
+        margin-bottom: 40px;
+    }
+
+}
+
+.last-news-box {
+    .subheading-box {
+        font-weight: 500;
+        font-size: 1.375em;
+        text-transform: none;
+        color: #31393e;
+        letter-spacing: 0;
+        line-height: 1.4;
+    }
+    .sneack-article {
+        margin-left: -24px;
+    }
+    
+}
+.sneack-article {
+    position: relative;
+    display: inline-block;
+    padding: 18px 27px 32px 24px;
+    margin-top: 20px;
+    &:before {
+        width: 28px;
+        height: 28px;
+        display: block;
+        content: "";
+        border-top: 3px #53be89 solid;
+        border-left: 3px #53be89 solid;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 2px 0 0 0;
+    }
+    &:after {
+        width: 28px;
+        height: 28px;
+        display: block;
+        content: "";
+        border-right: 3px #53be89 solid;
+        border-bottom: 3px #53be89 solid;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        border-radius: 0 0 2px 0;
+    }
+    p {
+        margin-bottom: 0;
+        font-size: 0.875em;
+        text-align: justify;
+        line-height: 1.7;
+        
+    }
+    strong {
+        font-weight: 600;
+    }
+    .small-text {
+        position: absolute;
+        right: 50px;
+        bottom: -7px;
+        font-weight: 400;
+        font-size: 0.875em;
+        letter-spacing: 1px;
+        color: #65676e;
+    }
+}
+.more-button { 
+    .more-icon {
+        @include transition();
+        background: #53be89;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        margin-right: 18px;
+        top: -1px;
+
+        &:before, &:after { 
+             @include transition();   
+             width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            display: inline-block;
+            vertical-align: middle;
+            content: "";
+            position: absolute;
+             background: #53be89; 
+        }
+
+        &:before {            
+            top: 0;
+            left: 7px;
+        }
+        &:after { 
+            top: 0;
+            left: -7px;
+        }
+    }
+
+
+
+    &:hover {
+
+        .more-icon {
+            background:#fff; 
+
+            &::after, &::before {
+                background:#fff;   
+            }
+        
+        }
+
+    }
+
+}
+.sneack-article-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.sneack-article-box {
+    width: 50%;
+    padding-left: 45px;
+    font-weight: 600;
+    font-size: 1em;
+    color: #31393e;
+    margin-bottom: 23px;
+}
+
+
+@media all and (max-width: 1220px) {
+    
+    .last-news-box {
+        .sneack-article {
+            margin-left: 0;
+        }
+    }
+    .hot-press-section {
+        .btn {
+            margin-left: 0;
+        }
+    }
+    
+}
+
+
+@media all and (max-width: 991px) {
+    
+    .last-news-box  {
+        .sneack-article {
+            margin-bottom: 30px;
+        }
+    }
+    .sneack-article-box {
+        width: calc(50% - 15px);
+        padding-left: 0;
+        &:nth-child(2n) {
+            margin-left: 30px;
+        }
+    }
+
+}
+
+ 
+
+@media all and (max-width: 576px) {
+
+    .sneack-article-box {
+        margin-bottom: 15px;
+    }
+
+    .hot-press-section hgroup {
+        margin-bottom: 20px;
+    }
+
+    .last-news-box {
+        display: none;
+    }
+
+    .sneack-article-box {
+        width: 100%;
+        &:nth-child(2n) {
+            margin-left: 0;
+        }
+    }
+
+    .hot-press-section .btn {
+        margin-top: 20px;
+        width: 165px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+

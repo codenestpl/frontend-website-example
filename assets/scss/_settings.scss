@@ -1,0 +1,79 @@
+/* ==========================================================================
+   Settings
+   ========================================================================== */
+
+/* Colors
+   ========================================================================== */
+
+$c-grey-xlight:#f4f5f6;
+$c-grey-light:#f3f4f7; 
+$c-grey-blue-light: #d7dae3;
+$c-grey-medium:#65676e; 
+$c-grey-dark:#31393e; 
+$c-grey-xdark:#2b2b2b;   
+$c-grey-xxdark:#1c2328;
+
+$c-h:$c-grey-xxdark; //Header color
+$c-subh:$c-grey-medium;   //Sub header color
+$c-p:$c-grey-xdark; //Paragraph color
+
+$c-green-xlight:#ebf8f2;
+$c-green-light:#69d09e;
+$c-green:#54bf8b;
+$c-green-dark:#369e6b; 
+
+$c-purple:#9d1ab1;     
+
+/* Texts
+   ========================================================================== */
+
+//Font family
+
+$fontfamily-heading: #{'Roboto', sans-serif};
+$fontfamily-text: #{'Open Sans', sans-serif};
+
+//Sizes
+
+$text-size-xl:2.6rem; //44px
+$text-size-l:2.36rem; //38px
+$text-size-xm:2rem; //32px
+$text-size-m:1.25rem; //20px
+$text-size-xn:1.125rem; //18px
+$text-size-n:1rem; //16px
+$text-size-s:0.875rem;  //14px
+$text-size-xs:0.75rem; //12px
+$text-size-xxs:12px;
+
+//Line-heights
+
+$text-lineheight-xl:44px;
+$text-lineheight-m:24px;
+$text-lineheight-n:1.618em;
+$text-lineheight-s:16px;
+$text-lineheight-xs:14px;
+$text-lineheight-xxs:12px;
+
+//Weights
+$text-weight-l:300;
+$text-weight-r:400;
+$text-weight-sb:500;
+$text-weight-b:700; 
+
+//Letter spacing
+
+$text-spacing-l:0.27em; //270
+$text-spacing-m:0.210em; //210
+$text-spacing-s:0.03em; //30
+
+/* Animations
+   ========================================================================== */
+
+$duration-desktop:150ms;
+$duration-mobile:$duration-desktop * 2;
+$cubic-bezier:#{cubic-bezier(0.45, 0.05, 0.55, 0.95)};
+
+/* Various
+   ========================================================================== */
+
+ $border-radius:3px;
+ 

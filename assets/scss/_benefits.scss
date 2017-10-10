@@ -1,0 +1,312 @@
+/* ==========================================================================
+   Benefits
+   ========================================================================== */
+ 
+ .benefits-carousel-box { 
+ 	overflow-x: hidden;
+ }
+
+ .benefits-carousel {
+ 	@include transition($duration-desktop);
+ 	position:relative;
+ 	left:0;
+ 	width:100%;	
+ }
+
+
+ .benefits-item-carousel {
+ 	padding: 0 15px;
+
+ 	.text-item-carousel {
+ 		margin-top: $text-size-n/2;
+
+ 		span-strong {
+ 			font-weight: $text-weight-r;
+			font-size: 1em;
+ 		}
+
+ 	}
+
+ 	.icon-item-carousel, 
+	.link-item-carousel, 
+	.text-item-carousel,
+	.text-item-carousel   {
+		@include transition($duration-desktop*1.5);
+	}
+
+
+	.text-item-carousel span { 
+		transition: color $duration-desktop*2 $cubic-bezier, background $duration-desktop*1.5 $cubic-bezier;
+	}
+
+ }
+
+ //RWD
+
+ @include media-breakpoint-down(lg) { 
+
+	.owl-item.center .benefits-item-carousel .text-item-carousel {
+		width: 120%;
+		margin-left: -10%;
+	}
+	
+}
+
+ @include media-breakpoint-down(sm) { 
+	
+	.benefits-carousel {
+		width: 100%;
+		left:0;
+	}
+
+	.owl-item.center .benefits-item-carousel .text-item-carousel {
+		width: 100%;
+		margin-left: 0;
+	}
+
+ }
+
+
+
+
+ /* Icons
+   ========================================================================== */
+
+ .icon-item-carousel {
+ 	@include size(160px, 160px);
+ 	margin: 50px auto 10px;
+
+ 	svg, img {
+		@include size(inherit, inherit)
+ 	}
+
+ }
+
+@include media-breakpoint-down(md) { 
+
+	 .icon-item-carousel {
+	 	margin-top: 30px;
+ 		@include size(130px, 130px);
+ 	 }
+	
+}
+
+@include media-breakpoint-down(sm) { 
+
+	 .icon-item-carousel { 
+ 		@include size(100px, 100px);
+ 	 }
+	
+}
+
+ /* Controls
+   ========================================================================== */
+
+
+
+ .benefits-item-carousel .link-item-carousel {
+	display: block;	
+	overflow: hidden;
+	position: relative; 
+	height: 33px; 
+
+	span { 
+		@include transition($duration-desktop, padding);
+		position: absolute;
+		bottom: 0px;
+		left: 100%;
+		margin-left: -50%;
+		display: inline-block;
+		padding: 5px 20px;
+		font-weight: 600;
+		color: $c-green-dark;
+		border-bottom: 2px solid $c-green-dark;
+		font-size: $text-size-s;
+		transform: translateX(0);
+		opacity: 0;
+
+		&::after, &::before {
+			@include transition($duration-desktop*0.5);
+			content:'';
+			width: 0;
+			height: 0;
+			border-style: solid;
+			opacity: 0;
+		}
+
+		&::after {
+			@include absolute(bottom -6px right -5px); 
+			
+			border-width: 5px 0 5px 11px;
+			border-color: transparent transparent transparent $c-green-dark;
+		}
+
+		&::before {
+			@include absolute(bottom -6px left -5px); 
+			border-width: 5px 11px 5px 0;
+			border-color: transparent $c-green-dark transparent transparent ;
+		}
+
+	}
+
+}
+
+.benefits-carousel .active.center + .active  {
+
+		.benefits-item-carousel {
+			@include transform(translateX(30%));
+		}
+
+		.link-item-carousel span { 
+			left: calc(50% + 5px);
+			opacity: 1; 
+
+			&::after {
+				opacity:1;
+			}
+
+			&::before {
+				opacity:0;
+			}
+
+		}	  	  
+
+}
+
+.benefits-carousel .owl-item:not(.active) + .active  {
+
+		.benefits-item-carousel {
+			@include transform(translateX(-30%));
+		}
+
+		.link-item-carousel span {
+			 left: calc(150% - 5px);
+			 transform: translateX(-100%);
+			 opacity: 1;
+
+			&::before {
+				opacity:1;
+			}
+
+			&::after {
+				opacity:0;
+			}
+
+		}	  	  
+
+}
+
+ @include media-breakpoint-down(sm) { 
+
+	.owl-theme .owl-nav { 
+	    top: 97px;  
+	}
+
+}
+
+/* Animations
+   ========================================================================== */
+
+ @include media-breakpoint-up(sm) { 
+
+.benefits-carousel .active.center + .active  {
+
+	.link-item-carousel:hover  span{
+		padding-left:30px;
+	}  	  
+
+}
+
+.benefits-carousel .owl-item:not(.active) + .active  {
+
+	.link-item-carousel:hover  span{
+		padding-right:30px;
+	}
+
+		 
+}
+ 
+.owl-item:not(.center) .benefits-item-carousel{ 
+
+	.icon-item-carousel {
+		opacity: 0;
+	}
+
+	.link-item-carousel {
+		opacity: 1;
+	}
+
+ 	.text-item-carousel { 	
+		color:#e4e6ea;
+
+		span {
+			background-color: #e4e6ea;
+			box-shadow: inset 0 0 10px $c-grey-xlight; 
+			-webkit-box-shadow: inset 0px 0px 0px 2px $c-grey-xlight;
+			-moz-box-shadow: inset 0px 0px 0px 2px $c-grey-xlight;
+			box-shadow: inset 0px 0px 0px 2px $c-grey-xlight;
+		}
+
+		span-strong span {
+			background-color: $c-grey-blue-light;
+			color:$c-grey-blue-light; 	
+		}
+
+ 	}
+
+ }
+
+.owl-item.center .benefits-item-carousel {
+	
+	@include transform(translateX(0%));
+
+	.link-item-carousel {
+		opacity: 0;
+	}  
+
+	.icon-item-carousel {
+		opacity: 1;
+	}
+
+ 	.text-item-carousel { 	
+		color:$c-grey-dark;
+
+		span-strong {
+			font-size: 1.1em;
+		}
+
+		span-strong span, span {
+			background-color: transparent;
+			-webkit-box-shadow: inset 0px 0px 0px 0px $c-grey-xlight;
+			-moz-box-shadow: inset 0px 0px 0px 0px $c-grey-xlight;
+			box-shadow: inset 0px 0px 0px 0px $c-grey-xlight; 	
+		} 
+ 	}
+
+
+ }
+
+}
+
+ @include media-breakpoint-down(sm) { 
+
+ 	.benefits-carousel   .owl-nav{	  
+	 		top:55px;	  
+ 	}
+
+ 	.benefits-carousel .owl-item:not(.active) + .active .benefits-item-carousel {
+	    -webkit-transform: translateX(0);
+	    -ms-transform: translateX(0);
+	    transform: translateX(0);
+	}
+	
+	.benefits-item-carousel .link-item-carousel {
+   		 display: none;
+   	}
+
+	 .icon-item-carousel {
+	 	margin: 30px auto 30px;
+ 		@include size(130px, 130px);
+ 	 }
+	
+}

@@ -1,0 +1,443 @@
+/* ==========================================================================
+   Team Section
+   ========================================================================== */
+  .team-animation-box {
+  	  	margin-top: 60px;
+  }
+
+  .team-animation {
+  	position: relative;
+  	left:-15px;
+  }
+ .team-animation .col-md-12 {
+ 	position: relative;
+ 	z-index: 3;
+ }
+
+ .team-text-box {
+ 	float: left;
+ 	width: 41.5%;
+ }
+
+.team-text-box.to-right {
+ 	 margin-left: auto; 
+ }
+
+ .boss-box {
+ 	@include center();
+ 	display: inline-block; 
+ }
+
+.content-phone-model .portrait-team {
+		
+	svg {
+		width: 75%;
+		margin: 12.5%;
+	}
+
+ } 
+
+ .small-phone {
+ 	width: 90px;
+ }
+
+  .xsmall-phone {
+ 	width: 50px;
+ }
+
+ .team-path-box {
+ 	position: absolute; 
+ }
+
+ #employee-1 {
+ 	height: 100%;
+ 	width: calc(45% - 90px); 
+ 	left: 50%;
+ 	top:-50%; 
+
+ 	.phone-model {
+ 		@include central();	
+ 		z-index: 1;	
+ 	}
+
+ }
+
+ .phone-model {
+
+ 	&#employee-phone-1 {
+		@include absolute(top 0 left 100%);
+ 	}
+
+ 	&#employee-phone-2 {
+		@include absolute(top 100% left 70%);
+ 	}
+
+ 	&#employee-phone-3 {
+		@include absolute(top 0% left 25%);
+ 	}
+
+ }
+
+.team-path-box-roads, .team-path-box-roads > div {
+	@include posAbsFull();
+}
+
+.team-path-box-roads .route-square {
+	position: absolute;
+	border-radius: 15px;
+	border:solid;
+	border-color:$c-grey-light;
+}
+
+.purchase-icon {
+	@include central();
+	@include size(30px, 30px);
+	position: absolute;
+	border-radius: 50%;
+	background: $c-grey-blue-light;
+
+	svg {  
+			@include relative(top 20% left 20%);
+			@include size(60%, 60%);  
+		}
+
+}
+
+#employee-phone-route-1{
+
+	.purchase-icon {
+		z-index: 1;
+		top:0%;
+		left:100%;
+		animation: employee-phone-route-1 $duration-desktop*18 $cubic-bezier $duration-desktop*3 infinite;
+	}
+	
+	.route-square.r1 {
+		@include absolute(left 47%);
+		@include size(53%, 55%);
+		border-width:3px 0 0 3px;
+		border-radius: 15px 0 0 0;
+	}
+
+	.route-square.r2 {
+		@include absolute(left 0 top 50%);
+		@include size(47%, 50%);
+		border-width:0 3px 3px 0;
+		border-radius: 0 0 15px;
+		margin-left: 3px;
+	}
+
+}
+
+@include keyframes (employee-phone-route-1) {
+	0%{
+		top:0%;
+		left:100%;
+	}
+	20% {
+		top: 0%;
+		left:47%;
+	}	
+	40% {
+		top:100%;
+		left:47%;
+	}
+	60% {
+		top:100%;
+		left:0%;
+	}
+	100% {
+		top:100%;
+		left:0%;
+	}
+}
+
+#employee-phone-route-2 {
+
+	.purchase-icon {
+		z-index: 1;
+		top:100%;
+		left:70%;
+		animation: employee-phone-route-2 $duration-desktop*12 $cubic-bezier $duration-desktop*6 infinite;
+	}
+
+	.route-square {
+		@include absolute(left 0);
+		@include size(25.5%, 100%);  
+		border-width: 0 3px 3px 0; 
+		border-radius: 0 0 15px 0;
+	}
+
+}
+
+@include keyframes (employee-phone-route-2) {
+	0%{
+		top:100%;
+		left:70%;
+	} 
+	60% {
+		top:100%;
+		left:0%;
+	}
+	100% {
+		top:100%;
+		left:0%;
+	}
+}
+
+#employee-phone-route-3 {
+
+	.purchase-icon {
+		z-index: 1;
+		top:0%;
+		left:25%;
+		animation: employee-phone-route-3 $duration-desktop*16 $cubic-bezier $duration-desktop*3 infinite;
+	}
+
+	.route-square {
+		@include absolute(left 0 top 0);
+		@include size(70%, 100%);  
+		border-width: 0 0 3px 0; 
+		border-radius: 0;
+	}
+
+}
+
+@include keyframes (employee-phone-route-3) {
+	0%{
+		top:0%;
+		left:25%;
+	}
+	25% {
+		top: 100%;
+		left:25%;
+	}	
+	45% {
+		top:100%;
+		left:0%;
+	} 
+	100% {
+		top:100%;
+		left:0%;
+	}
+}
+
+
+ #employee-2 {
+ 	height: 100%;
+ 	width: calc(45% - 90px); 
+ 	left: 50%;
+ 	top:100%; 
+
+ 	.phone-model {
+ 		@include central();	
+ 		z-index: 1;	
+ 	}
+
+	 #employee-phone-4 {
+	 	@include absolute(left 0 top 70%);
+	 }
+
+ }
+
+#employee-phone-route-4 {
+
+ 	border-left:3px solid $c-grey-light;
+
+ 	.purchase-icon {
+ 		animation: employee-phone-route-4 $duration-desktop*12 $cubic-bezier $duration-desktop*3 infinite;
+		top: 70%;
+		left: 0;
+ 	}
+
+ }
+
+
+@include keyframes (employee-phone-route-4) {
+	0%{
+		top: 70%;
+		left: 0;
+	} 	
+	35% {
+		top: -20%;
+		left: 0;
+	} 
+	100% {
+		top: -30%;
+		left: 0;
+	}
+}
+
+
+.accountant-box {
+	position: absolute;
+	height: 100%;
+    width: calc(45% - 90px);
+    left: 5%;
+    margin-left: 45px;
+    top: 100%;
+
+    .phone-model {
+    	position: relative;
+    	z-index: 3;
+    }
+
+}
+
+#employee-phone-route-5 {
+
+	.purchase-icon {
+		@include size(50px, 50px);
+		z-index: 1;
+		top:-50%;
+		left:120%;
+		animation: employee-phone-route-7 $duration-desktop*20 $cubic-bezier $duration-desktop*6 infinite;
+	}
+
+	.route-square.r1 {
+		@include absolute(left 45px top -40%);
+		@include size(#{calc(40% - 42px)}, 90%);  
+		border-width: 0 3px 3px 0; 
+		border-radius: 0 0 15px 0;
+	}
+
+	.route-square.r2 {
+		@include absolute(left 40% top -50%);
+		@include size(70%, 90%);  
+		border-width: 3px 0 0 3px; 
+		border-radius: 15px 0 0 0;
+	}
+
+}
+
+@include keyframes (employee-phone-route-7) {
+	0%{
+		top:-50%;
+		left:120%;
+	}
+	35% {
+		top:-50%;
+		left:40%;
+	}	
+	55% {
+		top:50%;
+		left:40%;
+	} 
+	75% {
+		top:50%;
+		left:10%;
+	}
+	100% {
+		top:50%;
+		left:10%;
+	}
+}
+
+
+
+.vertical-text  {
+	@extend .subheading-box;
+	@include verticalElement(30px);   
+	position:absolute;	
+	font-weight: 600;
+	color:$c-green;	
+} 
+
+.boss-text {
+	top:auto;
+	bottom: 0;
+	left:-15px;
+	
+}
+
+.employee-text {
+	top:auto;
+	bottom: 0;
+	left:100%;
+	margin-left: 17px;
+}
+
+
+.accountant-text {
+	top:auto;
+	bottom: 0;
+	left:-15px;
+	color:$c-purple;
+}
+
+
+@include media-breakpoint-down(md) {
+	#employee-phone-4, #employee-phone-3, #employee-phone-2,  #employee-phone-route-2, #employee-phone-route-3 , #employee-phone-route-4{
+			display:none; 
+		}
+
+	.team-animation-box { 
+		.team-text-box:last-of-type {
+		  padding-left: 30px;  
+		}
+
+	}
+
+	.team-text-box {
+		width: 60.5%;
+	   	padding: 0 0 30px 30px; 
+
+	   	&.to-right {
+	   		width:70%;
+	   		padding:50px 30px 0 0 ; 
+	   	}
+	}
+}
+
+@include media-breakpoint-down(sm) {
+
+	.team-animation {
+			display:none;
+	}
+	 #employee-phone-route-1, #employee-phone-route-5{
+			display:none; 
+		}
+
+	.small-phone {
+	    width: 60px;
+	}
+
+	.team-animation-box {
+		margin-top: 20px;
+	}
+
+	.team-animation {
+		left: 0px;
+		padding: 20px 35px 40px;
+	}
+
+	.team-animation .col-md-12, .accountant-box , #employee-1 {
+		display: inline-block;
+		position: relative;
+		top:0;
+		left:0;
+		margin:0;
+		float: left;
+		width: 80px;
+		height: 140px;
+		padding: 0;
+	}
+
+	.phone-model#employee-phone-1 {
+	    top: 50%;
+	    left: 52%;
+	    position: absolute;
+	}
+
+	.team-text-box {
+		width: auto;
+	   	padding: 0 15px !important; 
+
+
+	   	&.to-right {
+	   		width:auto;
+	   		padding:50px 30px 0 0 ; 
+	   	}
+	}
+
+}

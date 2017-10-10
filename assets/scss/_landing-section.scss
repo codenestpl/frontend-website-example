@@ -1,0 +1,270 @@
+/* ==========================================================================
+   Landing section
+   ========================================================================== */
+
+/* Texts
+   ========================================================================== */
+ 
+.landing-section {
+	margin-top: 0px; 
+	overflow: hidden;
+
+	> .container {
+		position:relative;
+	}
+
+	h1 {
+		margin-top: $text-size-xl/2; 
+		width: 110%;
+	}
+
+	h2 {
+		width: 90%;
+		margin:$text-size-xl 0;
+	}
+
+	.btn {
+		margin:0 0 $text-size-n*2 0;
+	}
+
+	.indepedent-cols {
+		position: absolute;
+		height: 100%;
+	}
+
+}
+
+
+.clients-box {
+	width: 90%;
+	margin-bottom:60px;
+
+	.item {
+		height: 30px;
+		background-position:left center;
+		background-size: auto 100%;
+		background-repeat: no-repeat;
+	}
+
+}
+
+.clients-box-title {
+	margin:$text-size-n*1.5 0 $text-size-n*1.5;
+	@extend .p-smallbox;
+	font-size: $text-size-s;
+	font-weight:600;
+	color: $c-grey-blue-light;
+	letter-spacing: $text-spacing-s;
+}
+
+
+.indepedent-cols {
+	@include absolute(bottom 0 right 15px);
+} 
+
+.mobile-showcase {
+	@include absolute(top 0);
+	z-index: 1;
+	width: 100%;
+
+	.landing-phone {
+		margin:0 0 0 41.6%;
+		width: 33.333%;
+		border-radius: 30px;
+		background-color: rgba($c-grey-light, 0.5);   
+		 box-shadow: 0px 0px 8px 8px rgba($c-grey-light, 0.5);  
+	}
+
+}
+
+.webapp-showcase { 
+	@include absolute( bottom -120px right 0); 
+	z-index: 0;
+	width: 100%;
+
+	.landing-webapp {
+		width: 100%;
+	}
+}
+
+.landing-phone {
+	width: 240px;
+	margin:auto;
+
+	.content-phone-model .ratio-box > div {
+		@include posAbsFull(); 
+	}
+
+	.phone-screen-img {
+		background-position: center bottom;
+		background-size: cover;
+	}
+
+	.mobile-video {
+		
+		video {
+			@include relative(top -0.25% left -0.25%);
+			@include size(100.5%,100.5%);
+		}
+
+	}
+
+}
+
+
+.landing-webapp {
+
+	.btn-play {
+		@include central();
+		position: absolute;
+		z-index: 2;
+		max-width: 120px;
+		margin: 0;
+	}
+
+	.webapp-screen-img {
+		@include posAbsFull();
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.webapp-video {
+		@include posAbsFull();
+		z-index: 1;
+
+		video {
+			@include size(101%,101%);
+			@include absolute(top -0.5% left -0.5%);
+		}
+
+	}
+
+	.content-webapp-model::before {
+		@include posAbsFull();
+		z-index: 3;
+		content: '';
+		background-color: $c-grey-light;
+		opacity: 0;
+	}
+
+}
+
+.landing-webapp.disabled {
+	
+	.btn-play {
+		opacity: 0;
+	}
+
+	.webapp-video {
+		display: none;
+	}
+
+	.content-webapp-model::before { 
+		opacity: 0.4;
+	}
+
+}
+
+.landing-webapp.disabled {
+	*, span {
+		border-color: $c-grey-light;
+		stroke: $c-grey-light !important;
+	}
+	
+	.upper-webapp-model .upper-webapp-model-balls span:first-of-type {
+		background-color:  $c-grey-light;
+	}
+
+	.upper-webapp-model-tab path {
+		fill: $c-grey-light;
+	}
+}
+
+
+/* RWD
+   ========================================================================== */
+
+@include media-up-xxl { 
+
+	.clients-box-title {
+		font-size: $text-size-n;
+	}
+	
+	.mobile-showcase .landing-phone {
+	    margin: 0 0 0 38%;
+	    width: 40.333%;
+	}
+}
+
+@include media-breakpoint-down(lg) {
+
+	.landing-section {
+
+		h1 {
+			width: 100%;
+			margin:$text-size-m/2 0 $text-size-m; 
+		}
+
+		h2 {
+			width: 100%;
+			padding-right: 30px;
+			margin:$text-size-m 0;
+		}
+
+		.btn {
+			margin:0 0 $text-size-m/2 0;
+		}
+
+	}
+
+	.clients-box {
+	    width: 100%;
+	    padding-right: 30px;
+	    margin-bottom: $text-size-m;
+
+	    .item {
+	    	height: 25px;
+	    }
+
+	}
+
+	.clients-box-title {
+		margin: $text-size-m/2 0; 
+		font-size: $text-size-s; 
+	}
+
+	.webapp-showcase {
+		bottom: -30px;
+		width: 90%;
+	}
+
+
+
+}
+
+@include media-breakpoint-down(md) {
+
+	.landing-section {
+
+		
+	}
+
+	.webapp-showcase {
+		left: 30%;
+		width: 120%;
+	}
+
+	.mobile-showcase .landing-phone {
+		width: 43%;
+	}	
+	
+}
+
+@include media-breakpoint-down(sm) {
+
+	#appShowcase {
+		display: none;
+	}
+
+}

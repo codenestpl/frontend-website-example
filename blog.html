@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Gulp Starter Kit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- build:css -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:300,400,500&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- endbuild -->
+</head>
+
+<body>
+
+    <header class="main-navbar container">
+
+        <a class="header-logo" href="#">
+            <svg svg-fallback="iqboxy-logo.png" xmlns="http://www.w3.org/2000/svg" width="291" height="100" viewBox="0 0 291 100"><polygon points="43.1 28.3 0 64.4 0 36.2 43.1 0.1 " fill="#8F3E97"/><polygon points="43.1 28.3 86.1 64.4 86.1 36.2 43.1 0.1 " fill="#55BE8A"/><polygon points="43.1 72.3 86.1 36.2 86.1 64.4 43.1 100.5 " fill="#8F3E97"/><polygon points="43.1 72.3 16.8 50.3 0 36.2 0 64.4 43.1 100.5 " fill="#55BE8A"/><polygon points="16.8 50.3 0 64.4 0 36.4 " fill="#763193"/><polyline points="86.1 36.4 69.3 50.3 86.1 64.4 " fill="#763193"/><g class="logo-text"><path d="M117.5 72.6V29.1h9.2v43.5H117.5z" fill="#2B2A2A"/><path d="M160.5 64.9c-1.1 0.3-2.7 0.6-4 0.6 -3.7 0-6.4-1.2-8.3-3.7 -1.8-2.5-2.8-6.1-2.8-11 0-4.9 0.9-8.5 2.8-11s4.6-3.7 8.3-3.7c7.3 0 11 4.9 11 14.7 0 3.1-0.4 5.6-1.1 7.7l6.7 7.3c0 0 0.1-0.1 0.1-0.1 0.4-0.6 0.8-1.3 1.2-2 1.8-3.5 2.7-7.8 2.7-12.9 0-7.2-1.8-12.8-5.3-16.6 -3.5-3.9-8.7-5.8-15.4-5.8s-11.8 1.9-15.4 5.7 -5.4 9.4-5.4 16.6 1.8 12.8 5.4 16.7c3.6 3.9 8.7 5.8 15.4 5.8h0.7l8 9.8h11.8l-10.5-11.7L160.5 64.9z" fill="#2B2A2A"/><path d="M191.2 65.7v-27.4h8.9c2.9 0 5.1 0.6 6.7 1.9 1.6 1.2 2.4 3.1 2.4 5.6 0 1.2-0.4 2.3-1.2 3.3s-1.8 1.7-3.1 2.1c1.7 0.4 3 1.2 3.9 2.4s1.4 2.7 1.4 4.4c0 2.5-0.8 4.4-2.4 5.7s-3.8 2-6.6 2H191.2zM194.9 49.9h6c1.4 0 2.5-0.4 3.4-1.1s1.3-1.8 1.3-3.2c0-1.5-0.5-2.6-1.4-3.3 -0.9-0.7-2.3-1.1-4-1.1h-5.2V49.9zM194.9 52.8v9.9h6.4c1.7 0 3-0.4 3.9-1.2 0.9-0.8 1.4-2 1.4-3.5 0-1.6-0.4-2.9-1.2-3.8 -0.8-0.9-2-1.4-3.6-1.4H194.9z" fill="#2B2A2A"/><path d="M238.3 54.4c0 3.3-1 6.1-3.1 8.3 -2.1 2.2-4.8 3.3-8.1 3.3 -3.2 0-5.8-1.1-7.8-3.3 -2-2.2-3-5-3-8.3v-4.9c0-3.3 1-6.1 3-8.3 2-2.2 4.6-3.3 7.8-3.3 3.3 0 6 1.1 8.1 3.3 2.1 2.2 3.1 5 3.1 8.3V54.4zM234.6 49.5c0-2.5-0.7-4.6-2-6.2 -1.4-1.6-3.2-2.4-5.5-2.4 -2.2 0-3.9 0.8-5.2 2.4 -1.3 1.6-1.9 3.7-1.9 6.2v4.9c0 2.5 0.6 4.6 1.9 6.2 1.3 1.6 3 2.4 5.2 2.4 2.3 0 4.1-0.8 5.5-2.4 1.3-1.6 2-3.7 2-6.2V49.5z" fill="#2B2A2A"/><path d="M254 49l6.4-10.7h4.5l-8.7 13.6 8.9 13.8h-4.4l-6.6-10.9 -6.6 10.9h-4.5l8.9-13.8 -8.7-13.6h4.4L254 49z" fill="#2B2A2A"/><path d="M279.6 52.2l7.1-13.9h4.2L281.4 56v9.6h-3.7v-9.9l-9.5-17.5h4.2L279.6 52.2z" fill="#2B2A2A"/></g></svg>
+        </a>
+
+        <div class="nav-box  collapse-box">
+            <div class="main-menu">
+                <nav>
+                    <ul>
+                        <li class="menu-item-has-children menu-item">
+                            <a href="#">Product</a>
+                            <ul class="sub-menu">
+                                <li class="menu-item"><a href="">Menu item</a></li>
+                                <li class="menu-item"><a href="">Menu item</a></li>
+                                <li class="menu-item"><a href="">Menu item</a></li>
+                                <li class="menu-item"><a href="">Menu item</a></li>
+                                <li class="menu-item"><a href="">Menu item</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children menu-item">
+                            <a href="#">Resources</a>
+                            <ul class="sub-menu">
+                                <li class="menu-item"><a href="">Menu item</a></li>
+                                <li class="menu-item"><a href="">Menu item</a></li>
+                                <li class="menu-item"><a href="">Menu item</a></li>
+                                <li class="menu-item"><a href="">Menu item</a></li>
+                                <li class="menu-item"><a href="">Menu item</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="" class="btn btn-secondary">LOGIN</a>
+                        </li>
+                        <li>
+                            <a href="" class="btn btn-primary">START FREE</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="search-box">
+                <form>
+                    <div id="searchMenu" class="to-collapse">
+                        <input required placeholder="Search..." type="text" name="">
+                    </div>
+
+                    <button class="btn btn-search"> 
+	    				<svg  svg-fallback="search-icon.png" class="search-icon"  xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"><circle cx="12.6" cy="12.5" r="10.3"/><line x1="20.6" y1="20.9" x2="28.6" y2="28.3"/></svg> 			
+		    		</button>
+                </form>
+                <button class="btn-invisible-collapse btn-collapse btn-close">
+		    		<svg class="close-icon" svg-fallback="close-icon.png"  xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"><line x1="6.9" y1="5.8" x2="25.9" y2="23.2"/><line x1="8.2" y1="24.2" x2="25.5" y2="5.2"/></svg> CLOSE
+		    	</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        
+
+    <section class="subpage-header" >
+        <div class="container">
+            <div class="row">
+
+            <div class="col-lg-12">
+                    <hgroup>                       
+                        <h1 class="heading-page">What’s new in <strong>IQBoxy</strong></h1>
+                         <h2 class="subheading-page">Hot off the press</h2>
+                    </hgroup>
+                </div>
+            </div> 
+
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <svg class="swipe-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 255 255"><line x1="63.7" y1="0.2" x2="63.7" y2="0.2" fill="none"/><path d="M220 133.8c-4.8-28.6-23.3-33.7-32.1-34.5 -6.6-8.7-16.1-13.4-27-13.4 -2.3 0-4.7 0.2-7.1 0.6 -6.4-7.7-15.3-11.9-25.5-11.9 -7.6 0-14.4 2.4-19.1 5.1L90.4 20.1C86.5 7.8 76.3 0 63.7 0c0 0 0 0 0 0 -9.5 0-18.4 4.5-23.9 12 -5.3 7.2-6.6 16.2-3.8 25.3l23.9 75.3c-3.4 2-6.4 4.6-8.9 7.7 -4.9 6.2-7.8 14.3-8.7 24.2 -1.3 14.7 3.6 31.2 14.5 48.8 7.4 11.9 15.6 21.2 19 24.8l11.2 26.3C89.7 250.9 96 255 103 255h74.9c8.5 0 15.8-6 17.2-14.4 0-0.2 0.1-0.3 0.1-0.5l3.1-26.2c0.1-0.3 0.3-0.7 0.5-1.1C215.6 174.5 222.5 148.7 220 133.8zM186.9 210.1c-0.2 0.4-0.3 0.8-0.4 1.2l-3.3 27.3c-0.4 2.6-2.7 4.4-5.4 4.4h-74.9c-2.2 0-4.2-1.2-5-3.2L86.3 212.3c-0.3-0.6-0.6-1.1-1.1-1.6 -4.8-5-33.6-36.5-31-65.1 1.5-17 9.8-22.5 15.4-24.2 2.8-0.9 4.4-4 3.5-6.8L47.4 33.7c-4-12.8 6.2-21.5 16.3-21.5 6.4 0 12.7 3.5 15.3 11.7l22 69c0.8 2.5 3 3.8 5.3 3.8 1.6 0 3.1-0.7 4.2-2.1 0.9-1.2 2-2.4 3.3-3.4 2.9-2.2 8.5-4.6 14.7-4.6 6.3 0 13.2 2.5 18.1 10.2 1 1.6 2.8 2.6 4.6 2.6 0.5 0 1-0.1 1.5-0.2 2.2-0.6 5.1-1.2 8.3-1.2 6.2 0 13.5 2.2 18.9 10.7 1 1.6 2.7 2.6 4.6 2.6 0 0 0.1 0 0.1 0 0.2 0 0.4 0 0.6 0 6.4 0 19.4 2.8 23 24.6C211.6 156 189.4 204.1 186.9 210.1z"/><path d="M116.5 35h58.5l-12.9 12.9c-2.3 2.3-2.3 6.1 0 8.5 1.2 1.2 2.7 1.8 4.2 1.8 1.5 0 3.1-0.6 4.2-1.8l22.4-22.4c2.3-2.3 2.3-6.1 0-8.5L170 2.5c-2.3-2.3-6.1-2.3-8.5 0 -2.3 2.3-2.3 6.1 0 8.5L173.5 23h-57c-3.3 0-6 2.7-6 6S113.2 35 116.5 35z"/></svg>
+                   
+                    <ul class="blog-navigation owl-carousel">
+                        <li class="active current-menu-item"><a href="#">Popular</a></li>
+                        <li><a href="#">Audio</a></li>
+                        <li><a href="#">Members</a></li>
+                        <li><a href="#">Handpicked</a></li>
+                        <li><a href="#">Technology</a></li>
+                        <li><a href="#">Creativity</a></li>
+                        <li><a href="#">Entrepreneurship</a></li>
+                        <li><a href="#">Culture</a></li>
+                        <li><a href="#">Self</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+    </div>
+    </section>
+    
+    <section class="category-box blog-type"> 
+    <div class="container"> 
+            <div class="row category-header">
+                <div class="col-auto">
+                <h3 class="subheading-section ">Latest</h3>
+                
+                </div>
+                 <a href="#"> <span>&#x2022;&#x2022;&#x2022;</span>  More</a>
+            </div>
+            <div class="row">                
+                      
+                
+                <div class="col-md-4">
+                  <div class="h-blog-box">
+                    <div style="background-image: url('assets/img/h-blog-1.jpg');" class="article-thumbnail">
+                         <a href=""></a>                      
+                    </div>
+                    <div class="article-text">
+                        <h3 class="heading-box"><a href="">Starting with IQBOXY Starting with IQBOXY</a></h3>
+                                               
+                        <p class="article-description p-smallbox">
+                             If you landed on this page it must mean you’re strongly considering IQBOXY but might not be completely sold on the idea of carrying around. 
+                        </p>
+                         <div class="article-info">
+                            <img src="assets/img/h-blog-1.jpg">
+                            <div>
+                               <p class="p-smallbox"><strong>Author name</strong></p> 
+                             <p class="p-smallbox">February 3, 2017 &#x2022; 4 min read</p> 
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                </div>
+
+                 <div class="col-md-4">
+                  <div class="h-blog-box">
+                    <div style="background-image: url('assets/img/h-blog-1.jpg');" class="article-thumbnail">
+                         <a href=""></a>                      
+                    </div>
+                    <div class="article-text">
+                        <h3 class="heading-box"><a href="">Starting with IQBOXY</a></h3>
+                                               
+                        <p class="article-description p-smallbox">
+                             If you landed on this page it must mean you’re strongly considering IQBOXY but might not be completely sold on the idea of carrying around. 
+                        </p>
+                         <div class="article-info">
+                            <img src="assets/img/h-blog-1.jpg">
+                            <div>
+                               <p class="p-smallbox"><strong>Author name</strong></p> 
+                             <p class="p-smallbox">February 3, 2017 &#x2022; 4 min read</p> 
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                </div>
+
+                 <div class="col-md-4">
+                  <div class="h-blog-box">
+                    <div style="background-image: url('assets/img/h-blog-1.jpg');" class="article-thumbnail">
+                         <a href=""></a>                      
+                    </div>
+                    <div class="article-text">
+                        <h3 class="heading-box"><a href="">Starting with IQBOXY</a></h3>
+                                               
+                        <p class="article-description p-smallbox">
+                             If you landed on this page it must mean you’re strongly considering IQBOXY but might not be completely sold on the idea of carrying around. 
+                        </p>
+                         <div class="article-info">
+                            <img src="assets/img/h-blog-1.jpg">
+                            <div>
+                               <p class="p-smallbox"><strong>Author name</strong></p> 
+                             <p class="p-smallbox">February 3, 2017 &#x2022; 4 min read</p> 
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                </div>
+                 <div class="col-md-4">
+                  <div class="h-blog-box">
+                    <div style="background-image: url('assets/img/h-blog-1.jpg');" class="article-thumbnail">
+                         <a href=""></a>                      
+                    </div>
+                    <div class="article-text">
+                        <h3 class="heading-box"><a href="">Starting with IQBOXY</a></h3>
+                                               
+                        <p class="article-description p-smallbox">
+                             If you landed on this page it must mean you’re strongly considering IQBOXY but might not be completely sold on the idea of carrying around. 
+                        </p>
+                         <div class="article-info">
+                            <img src="assets/img/h-blog-1.jpg">
+                            <div>
+                               <p class="p-smallbox"><strong>Author name</strong></p> 
+                             <p class="p-smallbox">February 3, 2017 &#x2022; 4 min read</p> 
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+
+     <section class="category-box"> 
+    <div class="container"> 
+            <div class="row category-header">
+                <div class="col-auto">
+                <h3 class="subheading-section ">Latest</h3>
+                
+                </div>
+                 <a href="#"> <span>&#x2022;&#x2022;&#x2022;</span>  More</a>
+            </div>
+            <div class="row">                
+                      
+                
+                <div class="col-md-6">
+                  <div class="h-blog-box">
+                    <div style="background-image: url('assets/img/h-blog-1.jpg');" class="article-thumbnail">
+                         <a href=""></a>                      
+                    </div>
+                    <div class="article-text">
+                        <h3 class="heading-box"><a href="">Starting with IQBOXY</a></h3>
+                                               
+                        <p class="article-description p-smallbox">
+                             If you landed on this page it must mean you’re strongly considering IQBOXY but might not be completely sold on the idea of carrying around. 
+                        </p>
+                         <div class="article-info">
+                            <img src="assets/img/h-blog-1.jpg">
+                            <div>
+                               <p class="p-smallbox"><strong>Author name</strong></p> 
+                             <p class="p-smallbox">February 3, 2017 &#x2022; 4 min read</p> 
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                </div>
+
+                 <div class="col-md-6">
+                  <div class="h-blog-box">
+                    <div style="background-image: url('assets/img/h-blog-1.jpg');" class="article-thumbnail">
+                         <a href=""></a>                      
+                    </div>
+                    <div class="article-text">
+                        <h3 class="heading-box"><a href="">Starting with IQBOXY</a></h3>
+                                               
+                        <p class="article-description p-smallbox">
+                             If you landed on this page it must mean you’re strongly considering IQBOXY but might not be completely sold on the idea of carrying around. 
+                        </p>
+                         <div class="article-info">
+                            <img src="assets/img/h-blog-1.jpg">
+                            <div>
+                               <p class="p-smallbox"><strong>Author name</strong></p> 
+                             <p class="p-smallbox">February 3, 2017 &#x2022; 4 min read</p> 
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                </div>
+
+                 <div class="col-md-6">
+                  <div class="h-blog-box">
+                    <div style="background-image: url('assets/img/h-blog-1.jpg');" class="article-thumbnail">
+                         <a href=""></a>                      
+                    </div>
+                    <div class="article-text">
+                        <h3 class="heading-box"><a href="">Starting with IQBOXY</a></h3>
+                                               
+                        <p class="article-description p-smallbox">
+                             If you landed on this page it must mean you’re strongly considering IQBOXY but might not be completely sold on the idea of carrying around. 
+                        </p>
+                         <div class="article-info">
+                            <img src="assets/img/h-blog-1.jpg">
+                            <div>
+                               <p class="p-smallbox"><strong>Author name</strong></p> 
+                             <p class="p-smallbox">February 3, 2017 &#x2022; 4 min read</p> 
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                </div>
+                 <div class="col-md-6">
+                  <div class="h-blog-box">
+                    <div style="background-image: url('assets/img/h-blog-1.jpg');" class="article-thumbnail">
+                         <a href=""></a>                      
+                    </div>
+                    <div class="article-text">
+                        <h3 class="heading-box"><a href="">Starting with IQBOXY</a></h3>
+                                               
+                        <p class="article-description p-smallbox">
+                             If you landed on this page it must mean you’re strongly considering IQBOXY but might not be completely sold on the idea of carrying around. 
+                        </p>
+                         <div class="article-info">
+                            <img src="assets/img/h-blog-1.jpg">
+                            <div>
+                               <p class="p-smallbox"><strong>Author name</strong></p> 
+                             <p class="p-smallbox">February 3, 2017 &#x2022; 4 min read</p> 
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+        
+   
+         
+          
+           
+    <section class="free-trail-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <hgroup>
+                        <h2 class="subheading-section">FREE TRAIL</h2>
+                        <h3 class="heading-section">Ready to get a clear view of your money?</h3>
+                    </hgroup>
+                    <a href="#">Start free</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="subfooter-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <h2 class="p-box">About iqboxy</h2>
+                    <p class="p-mediumbox">IQBOXY - receipts &amp; bills tracker, expense reports on iTunes · IQBoxy Self-Employed on Google Play for Android</p>
+                </div>
+                <div class="col-lg-3 col-md-auto col-sm-12">
+                    <h2 class="p-box">Social media</h2>
+                    <ul class="social-box">
+                        <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 430.113 430.114" style="enable-background:new 0 0 430.113 430.114;" xml:space="preserve"><g><path id="Facebook" d="M158.081,83.3c0,10.839,0,59.218,0,59.218h-43.385v72.412h43.385v215.183h89.122V214.936h59.805   c0,0,5.601-34.721,8.316-72.685c-7.784,0-67.784,0-67.784,0s0-42.127,0-49.511c0-7.4,9.717-17.354,19.321-17.354   c9.586,0,29.818,0,48.557,0c0-9.859,0-43.924,0-75.385c-25.016,0-53.476,0-66.021,0C155.878-0.004,158.081,72.48,158.081,83.3z" fill="#FFFFFF"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg></a></li>
+                        <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 612 612" style="enable-background:new 0 0 612 612;" xml:space="preserve" width="512px" height="512px"><g><g><path d="M612,116.258c-22.525,9.981-46.694,16.75-72.088,19.772c25.929-15.527,45.777-40.155,55.184-69.411    c-24.322,14.379-51.169,24.82-79.775,30.48c-22.907-24.437-55.49-39.658-91.63-39.658c-69.334,0-125.551,56.217-125.551,125.513    c0,9.828,1.109,19.427,3.251,28.606C197.065,206.32,104.556,156.337,42.641,80.386c-10.823,18.51-16.98,40.078-16.98,63.101    c0,43.559,22.181,81.993,55.835,104.479c-20.575-0.688-39.926-6.348-56.867-15.756v1.568c0,60.806,43.291,111.554,100.693,123.104    c-10.517,2.83-21.607,4.398-33.08,4.398c-8.107,0-15.947-0.803-23.634-2.333c15.985,49.907,62.336,86.199,117.253,87.194    c-42.947,33.654-97.099,53.655-155.916,53.655c-10.134,0-20.116-0.612-29.944-1.721c55.567,35.681,121.536,56.485,192.438,56.485    c230.948,0,357.188-191.291,357.188-357.188l-0.421-16.253C573.872,163.526,595.211,141.422,612,116.258z" fill="#FFFFFF"/></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg></a></li>
+                        <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 310 310" style="enable-background:new 0 0 310 310;" xml:space="preserve" width="512px" height="512px"><g id="XMLID_822_"><path id="XMLID_823_" d="M297.917,64.645c-11.19-13.302-31.85-18.728-71.306-18.728H83.386c-40.359,0-61.369,5.776-72.517,19.938   C0,79.663,0,100.008,0,128.166v53.669c0,54.551,12.896,82.248,83.386,82.248h143.226c34.216,0,53.176-4.788,65.442-16.527   C304.633,235.518,310,215.863,310,181.835v-53.669C310,98.471,309.159,78.006,297.917,64.645z M199.021,162.41l-65.038,33.991   c-1.454,0.76-3.044,1.137-4.632,1.137c-1.798,0-3.592-0.484-5.181-1.446c-2.992-1.813-4.819-5.056-4.819-8.554v-67.764   c0-3.492,1.822-6.732,4.808-8.546c2.987-1.814,6.702-1.938,9.801-0.328l65.038,33.772c3.309,1.718,5.387,5.134,5.392,8.861   C204.394,157.263,202.325,160.684,199.021,162.41z" fill="#FFFFFF"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg></a></li>
+                    </ul>
+                    <h2 class="p-box secound-p">Contact</h2>
+                    <ul class="social-box">
+                        <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512px" height="512px"><g><g><path d="M511.609,197.601c-0.001-0.77-0.173-1.933-0.472-2.603c-0.787-2.854-2.536-5.461-5.154-7.281l-73.292-50.948V82.153    c0-7.24-5.872-13.112-13.112-13.112H335.26l-71.743-49.878c-4.484-3.121-10.437-3.134-14.935-0.026l-72.206,49.904H92.426    c-7.242,0-13.112,5.872-13.112,13.112v53.973L5.666,187.027c-3.623,2.504-5.583,6.507-5.645,10.6    C0.017,197.704,0,197.777,0,197.857l0.391,284.235c0.005,3.477,1.391,6.81,3.852,9.266c2.458,2.451,5.788,3.827,9.26,3.827    c0.007,0,0.012,0,0.018,0l485.385-0.667c7.24-0.01,13.104-5.889,13.094-13.13L511.609,197.601z M432.69,168.708l41.898,29.118    l-41.898,29.128V168.708z M256.015,45.884l33.31,23.156h-66.812L256.015,45.884z M105.538,95.265h300.928v149.921L305.43,315.428    l-41.194-31.954c-0.064-0.05-0.119-0.081-0.181-0.126c-4.604-3.454-11.116-3.581-15.894,0.126l-41.493,32.185l-101.13-69.893    V95.265z M79.314,168.003v59.64l-43.146-29.819L79.314,168.003z M26.258,222.867l158.669,109.655L26.578,455.346L26.258,222.867z     M51.875,468.909l204.324-158.484l203.591,157.923L51.875,468.909z M327.144,332.271l158.276-110.036l0.32,233.059    L327.144,332.271z" fill="#FFFFFF"/></g></g><g><g><path d="M344.77,147.713H167.234c-7.24,0-13.112,5.872-13.112,13.112s5.872,13.112,13.112,13.112H344.77    c7.242,0,13.112-5.872,13.112-13.112S352.012,147.713,344.77,147.713z" fill="#FFFFFF"/></g></g><g><g><path d="M344.77,215.895H167.234c-7.24,0-13.112,5.872-13.112,13.112c0,7.24,5.872,13.112,13.112,13.112H344.77 c7.242,0,13.112-5.872,13.112-13.112C357.882,221.767,352.012,215.895,344.77,215.895z" fill="#FFFFFF"/></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg></a></li>
+                        <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 491.022 491.022" style="enable-background:new 0 0 491.022 491.022;" xml:space="preserve" width="512px" height="512px"><g><g><path d="M490.916,13.991c-0.213-1.173-0.64-2.347-1.28-3.307c-0.107-0.213-0.213-0.533-0.32-0.747    c-0.107-0.213-0.32-0.32-0.533-0.533c-0.427-0.533-0.96-1.067-1.493-1.493c-0.427-0.32-0.853-0.64-1.28-0.96    c-0.213-0.107-0.32-0.32-0.533-0.427c-0.32-0.107-0.747-0.32-1.173-0.427c-0.533-0.213-1.067-0.427-1.6-0.533    c-0.64-0.107-1.28-0.213-1.92-0.213c-0.533,0-1.067,0-1.6,0c-0.747,0.107-1.493,0.32-2.133,0.533    c-0.32,0.107-0.747,0.107-1.067,0.213L6.436,209.085c-5.44,2.347-7.893,8.64-5.547,14.08c1.067,2.347,2.88,4.373,5.227,5.44    l175.36,82.453v163.947c0,5.867,4.8,10.667,10.667,10.667c3.733,0,7.147-1.92,9.067-5.12l74.133-120.533l114.56,60.373    c5.227,2.773,11.627,0.747,14.4-4.48c0.427-0.853,0.747-1.813,0.96-2.667l85.547-394.987c0-0.213,0-0.427,0-0.64    c0.107-0.64,0.107-1.173,0.213-1.707C491.022,15.271,491.022,14.631,490.916,13.991z M190.009,291.324L36.836,219.218    L433.209,48.124L190.009,291.324z M202.809,437.138V321.831l53.653,28.267L202.809,437.138z M387.449,394.898l-100.8-53.013    l-18.133-11.2l-0.747,1.28l-57.707-30.4L462.116,49.298L387.449,394.898z" fill="#FFFFFF"/></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg></a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-5 col-md col-sm-12">
+                    <div class="contact-box-footer">
+                        <h2 class="p-box">Contact</h2>
+                        <p class="p-mediumbox align-normal">IQBOXY Inc.<br> (YC W17) <br>Mountain View 94041, California, USA Schedule a Demo or Meeting (PST)</p>
+                        <div class="mobile-apps-links">
+                            <h2 class="p-box">Mobile apps</h2>
+                            <ul>
+                                <li><a href="#"><img src="assets/img/google-play.png" alt=""></a></li>
+                                <li><a href="#"><img src="assets/img/app-store.png" alt=""></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-12">
+                    <div class="footer-left-position">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 290.973 100" style="enable-background:new 0 0 290.973 100;" xml:space="preserve"><polygon style="fill:#8F3E97;" points="43.069,28.321 0,64.387 0,36.186 43.069,0.12 "/><polygon style="fill:#55BE8A;" points="43.069,28.321 86.137,64.387 86.137,36.186 43.069,0.12 "/><polygon style="fill:#8F3E97;" points="43.069,72.252 86.137,36.186 86.137,64.387 43.069,100.453 "/><polygon style="fill:#55BE8A;" points="43.069,72.252 16.836,50.285 0,36.186 0,64.387 43.069,100.453 "/><polygon style="fill:#763193;" points="16.836,50.285 0,64.387 0,36.426 "/><polyline style="fill:#763193;" points="86.137,36.426 69.301,50.285 86.137,64.387 "/><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+                        <p class="p-box">Privacy · Terms · &copy; 2017 <strong>IQBoxy Inc.</strong> <br>made with <span class="green-color">♥</span> in California</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="footer-right-position">
+                        <a href="#"><img src="assets/img/logo-codenest.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>    
+
+    </main>
+
+</body>
+
+<script type="text/javascript" src="assets/scripts/script.min.js"></script>
+  
+</html>

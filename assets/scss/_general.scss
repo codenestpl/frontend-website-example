@@ -1,0 +1,190 @@
+/* ==========================================================================
+   General
+   ========================================================================== */
+
+/* Elements
+   ========================================================================== */
+
+html, body {
+	font-family: $fontfamily-text;
+	font-weight:$text-weight-l; 
+	font-size:16px;
+	color:$c-p;
+}
+
+main {
+	display:block;
+	max-width:100vw;
+	width:100%;
+	overflow-x:hidden;
+}
+
+a {
+
+    @include transition();
+	color:$c-green;
+	font-weight:$text-weight-sb;
+    
+	&:hover, .hover {
+		color:$c-green-light;
+		text-decoration:none;
+	}
+
+	&:focus, .focus {
+		color:$c-green-dark;
+		text-decoration:none;
+	}
+
+	&.green-hover {
+		color:inherit;
+
+		&:hover {
+			color:$c-green-light;
+		}
+
+	}
+
+}
+
+green {
+	color:$c-green;
+}
+
+
+purple {
+	color:$c-purple;
+}
+
+/* Sections
+   ========================================================================== */
+
+$skewed-deg:3deg;
+$skewed-h:50px;
+
+section {
+	position: relative;
+	padding: 60px 0; 
+
+	&.skewed {
+		position: relative;
+		z-index: 1;
+        margin: 60px 0; 
+		&::after, &::before {
+			@include size(100%, 100%);
+			@include transform(#{skewY(-$skewed-deg)}); 
+			content:'';
+			position: absolute;
+			display:block;
+			background-color:inherit;
+		}
+
+		&.flip {
+			z-index: 2;
+
+			&::after, &::before {				
+				@include transform(#{skewY($skewed-deg)}); 
+			}
+			
+		}
+
+		&::after {			
+			@include prefix(transform-origin, #{100% 100%});  
+			top: 0;
+		}
+
+		&::before {			
+			@include prefix(transform-origin, #{0% 100%});  
+			bottom: 0;
+		}  
+
+	}
+
+}
+
+.hgroup-section {
+	margin:0 auto;
+	padding: 0 15px;
+}
+
+.skewed .hgroup-section {
+	margin:-30px auto 0;
+}
+
+section .container,section .container-fluid { 
+	position: relative;
+	z-index:1;
+}
+section .container-fluid {
+    max-width: 100%;
+}
+
+@include media-breakpoint-down(lg) {
+
+	section {
+		position: relative;
+		padding: 30px 0;
+		
+		&.skewed {
+			margin:30px 0;
+
+			 .hgroup-section {
+			 	margin-top:0;
+			 }
+
+		}
+		
+	}
+
+	video {
+		display: none;
+	}
+	
+}
+
+@include media-breakpoint-down(md) {
+	
+	 
+
+
+}
+
+/* Colors bg
+   ========================================================================== */
+
+.purple-bg {
+	background-color:$c-purple; 
+}
+
+.grey-bg {
+	background-color:$c-grey-xlight; 
+}
+
+.grey-medium-bg {
+	background-color:$c-grey-medium; 
+}
+
+.grey-dark-bg {
+	background-color:$c-grey-dark; 
+}
+
+.green-bg {
+	background-color:$c-green; 
+}
+
+/* Border
+   ========================================================================== */ 
+
+.border-green {
+	border-color:$c-green;
+}
+
+.border-purple {
+	border-color:$c-purple;
+}
+
+/* Others
+   ========================================================================== */ 
+
+ .to-right {
+ 	float:right; 
+ }

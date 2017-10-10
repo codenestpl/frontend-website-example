@@ -1,0 +1,159 @@
+/* ==========================================================================
+   Mixins 
+   ========================================================================== */
+
+ /* General
+   ========================================================================== */
+@mixin prefix($property, $value, $vendors: webkit moz ms o) {
+      @if $vendors {
+        @each $vendor in $vendors {
+          #{"-" + $vendor + "-" + $property}: #{$value};
+        }
+      }
+      #{$property}: #{$value};
+}
+
+/* Positioning
+   ========================================================================== */
+
+@mixin position($position, $args) {
+  @each $o in top right bottom left {
+        $i: index($args, $o);
+
+    @if $i and $i + 1 <= length($args) and type-of(nth($args, $i + 1)) == number  {
+          #{$o}: nth($args, $i + 1);
+    }
+  }
+
+  position: $position;
+}
+
+@mixin absolute($args) {
+        @include position(absolute, $args);
+}
+
+@mixin fixed($args) {
+        @include position(fixed, $args);
+}
+
+@mixin relative($args) {
+        @include position(relative, $args);
+}
+
+
+@mixin posAbs($topbot:top,$leftright:left) {
+	@include absolute(#{$topbot} 0 #{$leftright} 0); 
+}  
+
+@mixin posAbsFull() {
+		@include posAbs();
+		width:100%; 
+		height:100%;
+} 
+
+@mixin centered($width_t) { 
+	left:50%;
+	width:$width_t;
+	margin-left: -#{$width_t/2}; 
+}
+
+@mixin middle() { 
+  @include relative(top 50%);
+  @include transform(#{translate(0, -50%)});   
+}
+
+@mixin central() { 
+  @include relative(top 50% left 50%);
+  @include transform(#{translate(-50%, -50%)});   
+}
+@mixin center() { 
+  @include relative( left 50%);
+  @include transform(#{translate(-50%, 0)});   
+}
+
+/* Box model
+   ========================================================================== */
+@mixin size($width, $height: 'auto') {
+      width: $width;
+      height: $height;
+}
+
+@mixin  col-width($col-x) {
+	width: #{$col-x * 8.33333%};
+}
+
+@mixin ratio($ratio_x:100%) {
+
+		&::after{ 
+			content:''; 
+			display:block; 
+			position:relative; 
+			padding-top:$ratio_x
+		}
+
+		.ratio-box {
+			@include posAbsFull();
+		}
+
+}
+
+/* Animation
+   ========================================================================== */
+
+@mixin transition ( $transition_czas:150ms ,$transition_co:all, $transition_jak:$cubic-bezier) {
+	@include prefix(transition, #{$transition_co $transition_czas $transition_jak});  
+}
+ 
+/*Keyframes*/
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    } 
+}
+
+@mixin animation ($animation_co) {
+    animation:$animation_co;
+    -moz-animation:$animation_co;
+    -webkit-animation:$animation_co;                              
+    -o-animation:$animation_co;
+}
+
+/* Other
+   ========================================================================== */
+
+@mixin transform ($transform_prop) {	
+ 	@include prefix(transform, $transform_prop);
+}
+
+@mixin verticalElement ($width_t) {
+	position: relative;
+    left: #{$width_t / 2};
+    width:$width_t;
+	@include transform(#{rotate(-90deg)}); 
+	@include prefix(transform-origin, #{0% 50%});     
+}
+
+ /* Media queries
+   ========================================================================== */
+
+@mixin media-up-xxl {
+   @media (min-width: 1600px)  { @content; }
+}
+
+@mixin media-up-xs {
+   @media (min-width: 320px)  { @content; } 
+} 
+
+@mixin media-down-xs {
+   @media (max-width: 320px)  { @content; } 
+} 
+ 
